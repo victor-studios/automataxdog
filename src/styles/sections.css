@@ -54,7 +54,8 @@ section {
 
 .hero-title {
   font-size: 72px;
-  font-weight: 800;
+  font-weight: 900;
+  -webkit-text-stroke: 1px currentColor;
   letter-spacing: -2px;
   margin-bottom: 24px;
   line-height: 1.1;
@@ -150,7 +151,8 @@ section {
 }
 .section-title {
   font-size: 46px;
-  font-weight: 800;
+  font-weight: 900;
+  -webkit-text-stroke: 0.5px currentColor;
   margin-bottom: 16px;
 }
 .section-subtitle {
@@ -302,10 +304,9 @@ section {
 }
 .perm-icon {
   width: 64px; height: 64px;
-  background: rgba(5, 5, 8, 0.85);
-  -webkit-backdrop-filter: blur(24px) saturate(120%);
-  backdrop-filter: blur(24px) saturate(120%);
-  transform: translateZ(0);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  backdrop-filter: blur(12px) saturate(120%);
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
@@ -318,11 +319,11 @@ section {
 .perm-node.active .perm-icon {
   border-color: var(--node-color);
   box-shadow: 0 0 24px var(--node-color), inset 0 0 12px var(--node-color);
-  background: rgba(5, 5, 8, 0.95);
-  -webkit-backdrop-filter: blur(32px) saturate(150%);
-  backdrop-filter: blur(32px) saturate(150%);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  backdrop-filter: blur(12px) saturate(120%);
   color: var(--node-color);
-  transform: scale(1.1) translateZ(0);
+  transform: scale(1.1);
 }
 .perm-name {
   font-weight: 600;
