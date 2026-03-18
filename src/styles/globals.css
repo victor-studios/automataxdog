@@ -21,9 +21,9 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 400; /* Russo One is naturally very bold */
+  font-weight: 600; /* Orbitron base weight */
   line-height: 1.2;
-  letter-spacing: 1px; /* Add slight tracking to Russo One for elegant look */
+  letter-spacing: 1px;
 }
 
 a {

@@ -12,9 +12,9 @@
   --text-secondary: rgba(255, 255, 255, 0.55);
   
   /* Minimal glass boundaries */
-  --border-color: rgba(255, 255, 255, 0.04);
-  --glass-bg: rgba(255, 255, 255, 0.02);
-  --glass-bg-hover: rgba(255, 255, 255, 0.04);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(5, 5, 8, 0.75); /* Much darker to block dots from clashing with text */
+  --glass-bg-hover: rgba(15, 15, 20, 0.85);
 
   /* Deep subtle atmospheric gradients instead of bright radial blobs */
   --gradient-glow: radial-gradient(circle at 15% 50%, rgba(181, 23, 158, 0.08) 0%, transparent 40%),

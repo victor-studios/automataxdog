@@ -45,14 +45,13 @@ const BackgroundGlobe = () => {
       position: 'fixed',
       top: '50%',
       left: '50%',
-      transform: 'translate(-50%, -40%)', // Centered but slightly pulled down
-      width: '120vw',       // Make it massive by default
-      height: '120vw', 
-      minWidth: '1000px',   // Ensure it doesn't shrink to tiny on mobile
-      minHeight: '1000px',
+      transform: 'translate(-50%, -40%)', 
+      width: '120vw',       
+      aspectRatio: '1 / 1', // Guarantees a perfect 1:1 square to prevent squeezed ovals
+      minWidth: '1000px',   
       zIndex: -3, 
       pointerEvents: 'none',
-      opacity: 0.35,        // Increased visibility significantly
+      opacity: 0.2,        
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
