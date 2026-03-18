@@ -1,0 +1,52 @@
+:root {
+  /* Ultra-Premium Dark Colors */
+  --bg-primary: #030303;
+  --bg-secondary: #0a0a0a;
+  --accent-neon-blue: #00E5FF;
+  --accent-purple: #B5179E; /* Refined magenta/purple inspired by reference */
+  --success-green: #00FF94;
+  --warning-orange: #FF9F1C;
+  --danger-red: #FF3B3B;
+  
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.55);
+  
+  /* Minimal glass boundaries */
+  --border-color: rgba(255, 255, 255, 0.04);
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-bg-hover: rgba(255, 255, 255, 0.04);
+
+  /* Deep subtle atmospheric gradients instead of bright radial blobs */
+  --gradient-glow: radial-gradient(circle at 15% 50%, rgba(181, 23, 158, 0.08) 0%, transparent 40%),
+                   radial-gradient(circle at 85% 30%, rgba(0, 229, 255, 0.05) 0%, transparent 40%),
+                   radial-gradient(circle at 50% 100%, rgba(181, 23, 158, 0.05) 0%, transparent 50%);
+
+  /* Level Colors */
+  --l1-color: #8C8C8C;
+  --l2-color: #00E5FF;
+  --l3-color: #00FF94;
+  --l4-color: #FF9F1C;
+  --l5-color: #FF3B3B;
+
+  /* Typography */
+  --font-heading: 'Russo One', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Sizing & Borders */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --container-width: 1200px;
+}
+
+[data-theme='light'] {
+  --bg-primary: #FAFAFA;
+  --bg-secondary: #FFFFFF;
+  --text-primary: #111111;
+  --text-secondary: rgba(0, 0, 0, 0.6);
+  --border-color: rgba(0, 0, 0, 0.05);
+  --glass-bg: rgba(0, 0, 0, 0.02);
+  --glass-bg-hover: rgba(0, 0, 0, 0.04);
+  --gradient-glow: radial-gradient(circle at 15% 50%, rgba(181, 23, 158, 0.05) 0%, transparent 40%),
+                   radial-gradient(circle at 85% 30%, rgba(0, 229, 255, 0.03) 0%, transparent 40%);
+}
