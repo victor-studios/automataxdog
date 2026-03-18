@@ -43,7 +43,7 @@
 
 .hero-actions {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   justify-content: center;
   align-items: center;
 }
@@ -51,60 +51,37 @@
 .hero-visual {
   margin-top: 80px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   position: relative;
   perspective: 1000px;
 }
 
-.hero-dashboard-mock {
+.hero-dashboard-container {
   width: 100%;
-  height: 500px;
+  height: min(700px, 60vh);
   background: rgba(10, 15, 37, 0.6);
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
   box-shadow: 0 30px 60px rgba(0,0,0, 0.4), 
-              0 0 40px rgba(123, 97, 255, 0.2) inset;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  transform: rotateX(10deg) translateY(0px);
-  transition: transform 0.5s ease;
+              0 0 40px rgba(123, 97, 255, 0.1);
+  transform: rotateX(8deg) translateY(0px) scale(0.95);
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   overflow: hidden;
   display: flex;
 }
 
-.hero-dashboard-mock:hover {
-  transform: rotateX(5deg) translateY(-10px);
+.hero-dashboard-container:hover {
+  transform: rotateX(2deg) translateY(-10px) scale(0.98);
   box-shadow: 0 40px 80px rgba(0,0,0, 0.5), 
-              0 0 60px rgba(0, 209, 255, 0.3) inset;
+              0 0 60px rgba(181, 23, 158, 0.2);
 }
 
-/* Mock dashboard internal layout */
-.mock-sidebar {
-  width: 240px;
-  border-right: 1px solid var(--border-color);
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.hero-dashboard-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Prevents cropping the dashboard UI */
+  object-position: top;
 }
-.mock-main {
-  flex: 1;
-  padding: 32px;
-  position: relative;
-}
-.mock-nav-item {
-  height: 36px;
-  border-radius: var(--radius-sm);
-  background: var(--glass-bg);
-}
-.mock-chat-bubble {
-  padding: 16px;
-  border-radius: var(--radius-md);
-  margin-bottom: 16px;
-  max-width: 80%;
-}
-.mock-bot { background: rgba(123, 97, 255, 0.1); border: 1px solid rgba(123, 97, 255, 0.2); }
-.mock-user { background: rgba(0, 209, 255, 0.1); border: 1px solid rgba(0, 209, 255, 0.2); margin-left: auto; }
 
 /* Trust Logos */
 .trust-section {
