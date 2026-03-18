@@ -40,3 +40,47 @@ ul {
   margin: 0 auto;
   padding: 0 24px;
 }
+
+/* Minimalist Tech Background Animations */
+.animated-background {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  animation: tech-pan 30s linear infinite;
+}
+
+[data-theme='light'] .animated-background {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+.animated-scanline {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 2px;
+  background: var(--accent-neon-blue);
+  box-shadow: 0 0 10px var(--accent-neon-blue), 0 0 20px var(--accent-neon-blue);
+  opacity: 0.15;
+  z-index: -1;
+  pointer-events: none;
+  animation: scanline cubic-bezier(0.1, 0.8, 0.9, 0.2) 6s infinite;
+}
+
+@keyframes tech-pan {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-40px) translateX(-40px); }
+}
+
+@keyframes scanline {
+  0% { top: 0; opacity: 0; }
+  10% { opacity: 0.15; }
+  90% { opacity: 0.15; }
+  100% { top: 100vh; opacity: 0; }
+}

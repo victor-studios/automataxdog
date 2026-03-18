@@ -12,6 +12,7 @@ import Community from './components/Community';
 import Pricing from './components/Pricing';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
+import BackgroundGlobe from './components/BackgroundGlobe';
 
 function App() {
   const [lang, setLang] = useState('EN');
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <BackgroundGlobe />
       <Navbar lang={lang} toggleLang={toggleLang} theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero lang={lang} />

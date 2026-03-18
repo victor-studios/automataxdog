@@ -38,10 +38,6 @@ const Navbar = ({ lang, toggleLang, theme, toggleTheme }) => {
         <button className="icon-btn" onClick={toggleLang} title="Toggle Language">
           {lang}
         </button>
-        <button className="icon-btn" onClick={toggleTheme} title="Toggle Theme">
-          {theme === 'dark' ? '☀️' : '🌙'}
-        </button>
-        <button className="nav-item">{t.login}</button>
         <button className="btn-primary" style={{ padding: '8px 16px', fontSize: '14px' }}>
           {t.getStarted}
         </button>

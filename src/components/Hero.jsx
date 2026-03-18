@@ -45,7 +45,7 @@ const Hero = ({ lang }) => {
       <div className="hero-visual">
         <div className="hero-dashboard-container">
           <img 
-            src={lang === 'CN' ? '/hero-cn.png' : '/hero-en.png'} 
+            src={lang === 'CN' ? '/dashboard-cn.png' : '/dashboard-en.png'} 
             alt="AutoMatax Dashboard Interface" 
             className="hero-dashboard-img" 
           />
