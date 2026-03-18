@@ -5,38 +5,38 @@ const BackgroundGlobe = () => {
   const canvasRef = useRef();
 
   useEffect(() => {
-    let phi = Math.PI; // starting position
-    let width = 0;
-    
-    const onResize = () => canvasRef.current && (width = canvasRef.current.offsetWidth);
-    window.addEventListener('resize', onResize);
-    onResize();
+    let phi = Math.PI; 
+
+    // PERFORMANCE FIX: 
+    // Instead of rendering a massive 4k+ resolution canvas based on 120vw,
+    // we lock the internal WebGL rendering string to 1000x1000 and let CSS hardware scale it up.
+    // This reduces GPU memory and processing by over 80%.
+    const renderSize = 1000;
 
     const globe = createGlobe(canvasRef.current, {
-      devicePixelRatio: 2,
-      width: width * 2,
-      height: width * 2,
+      devicePixelRatio: 1, // Downgrade pixel ratio to prevent retina 4x overhead
+      width: renderSize,
+      height: renderSize,
       phi: 0,
-      theta: 0.1, // Near equator viewing
+      theta: 0.1, 
       dark: 1, 
       diffuse: 1.2,
-      mapSamples: 14000, 
+      mapSamples: 10000, // Reduced from 14000 to save compute
       mapBrightness: 6,
-      baseColor: [0.5, 0.5, 0.6], // increased brightness
+      baseColor: [0.5, 0.5, 0.6], 
       markerColor: [1, 0, 0], 
-      glowColor: [0.2, 0.2, 0.3], // slightly intensified atmospheric glow
+      glowColor: [0.2, 0.2, 0.3], 
       markers: [],
       onRender: (state) => {
         state.phi = phi;
-        phi += 0.0015; // Slow, cinematic spin
-        state.width = width * 2;
-        state.height = width * 2;
+        phi += 0.0015; 
+        state.width = renderSize;
+        state.height = renderSize;
       },
     });
 
     return () => {
       globe.destroy();
-      window.removeEventListener('resize', onResize);
     };
   }, []);
 
@@ -47,7 +47,7 @@ const BackgroundGlobe = () => {
       left: '50%',
       transform: 'translate(-50%, -40%)', 
       width: '120vw',       
-      aspectRatio: '1 / 1', // Guarantees a perfect 1:1 square to prevent squeezed ovals
+      aspectRatio: '1 / 1', 
       minWidth: '1000px',   
       zIndex: -3, 
       pointerEvents: 'none',

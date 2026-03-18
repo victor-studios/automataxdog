@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, Settings, Rocket } from 'lucide-react';
 
 const HowItWorks = ({ lang }) => {
   const content = {
@@ -6,18 +7,18 @@ const HowItWorks = ({ lang }) => {
       title: 'How It Works',
       subtitle: 'Three simple steps to take full control of your AI ecosystem.',
       steps: [
-        { icon: '🔗', title: '1. Connect Your AI Accounts', desc: 'Securely link your existing ChatGPT, DeepSeek, and other API keys or local models.' },
-        { icon: '⚙️', title: '2. Choose Your Mode', desc: 'Select Basic (zero-cost existing layers) or Enhanced (API token-based advanced reasoning).' },
-        { icon: '🚀', title: '3. Let AutoMatax Execute', desc: 'Sit back as the OS delegates, automates, and learns from your daily workflows securely.' }
+        { icon: <Link size={32} />, title: '1. Connect Your AI Accounts', desc: 'Securely link your existing ChatGPT, DeepSeek, and other API keys or local models.' },
+        { icon: <Settings size={32} />, title: '2. Choose Your Mode', desc: 'Select Basic (zero-cost existing layers) or Enhanced (API token-based advanced reasoning).' },
+        { icon: <Rocket size={32} />, title: '3. Let AutoMatax Execute', desc: 'Sit back as the OS delegates, automates, and learns from your daily workflows securely.' }
       ]
     },
     CN: {
       title: '工作原理',
       subtitle: '只需三个简单的步骤，即可完全掌控您的AI生态系统。',
       steps: [
-        { icon: '🔗', title: '1. 连接您的AI账户', desc: '安全地链接您现有的ChatGPT、DeepSeek等API密钥或本地模型。' },
-        { icon: '⚙️', title: '2. 选择您的模式', desc: '选择基础模式（零成本使用现有工具）或增强模式（基于API的更高级推理）。' },
-        { icon: '🚀', title: '3. 交给AutoMatax执行', desc: '让OS委托、自动化并从您的日常工作流中安全地学习。' }
+        { icon: <Link size={32} />, title: '1. 连接您的AI账户', desc: '安全地链接您现有的ChatGPT、DeepSeek等API密钥或本地模型。' },
+        { icon: <Settings size={32} />, title: '2. 选择您的模式', desc: '选择基础模式（零成本使用现有工具）或增强模式（基于API的更高级推理）。' },
+        { icon: <Rocket size={32} />, title: '3. 交给AutoMatax执行', desc: '让OS委托、自动化并从您的日常工作流中安全地学习。' }
       ]
     }
   };
