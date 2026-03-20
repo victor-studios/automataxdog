@@ -10,9 +10,10 @@ import UseCases from './components/UseCases';
 import SkillEcosystem from './components/SkillEcosystem';
 import Community from './components/Community';
 import Pricing from './components/Pricing';
-import CTA from './components/CTA';
 import Footer from './components/Footer';
 import BackgroundGlobe from './components/BackgroundGlobe';
+import WhatIsAutomatax from './components/WhatIsAutomatax';
+import MinimumRequirements from './components/MinimumRequirements';
 
 function App() {
   const [lang, setLang] = useState('EN');
@@ -35,6 +36,8 @@ function App() {
       <Navbar lang={lang} toggleLang={toggleLang} theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero lang={lang} />
+        <WhatIsAutomatax lang={lang} />
+        <MinimumRequirements lang={lang} />
         <TrustLogos lang={lang} />
         <HowItWorks lang={lang} />
         <FeaturesGrid lang={lang} />
@@ -44,7 +47,6 @@ function App() {
         <SkillEcosystem lang={lang} />
         <Community lang={lang} />
         <Pricing lang={lang} />
-        <CTA lang={lang} />
       </main>
       <Footer lang={lang} />
     </div>

@@ -7,15 +7,19 @@ const Navbar = ({ lang, toggleLang, theme, toggleTheme }) => {
       features: 'Features',
       howItWorks: 'How it Works',
       pricing: 'Pricing',
+      about: 'About Us',
+      contact: 'Contact Us',
       login: 'Login',
-      getStarted: 'Get Started'
+      getStarted: 'Adopt a Dog'
     },
     CN: {
       features: '功能',
       howItWorks: '工作原理',
       pricing: '定价',
+      about: '关于我们',
+      contact: '联系我们',
       login: '登录',
-      getStarted: '立即开始'
+      getStarted: '立即养狗'
     }
   };
 
@@ -32,12 +36,19 @@ const Navbar = ({ lang, toggleLang, theme, toggleTheme }) => {
         <a className="nav-item" href="#features">{t.features}</a>
         <a className="nav-item" href="#how-it-works">{t.howItWorks}</a>
         <a className="nav-item" href="#pricing">{t.pricing}</a>
+        <a className="nav-item" href="#what-is">{t.about}</a>
+        <a className="nav-item" href="#contact-form">{t.contact}</a>
       </div>
 
       <div className="nav-actions">
-        <button className="icon-btn" onClick={toggleLang} title="Toggle Language">
-          {lang}
-        </button>
+        <div className="lang-toggle">
+          <div className={`lang-option ${lang === 'CN' ? 'active' : ''}`} onClick={() => lang !== 'CN' && toggleLang()}>
+            中文
+          </div>
+          <div className={`lang-option ${lang === 'EN' ? 'active' : ''}`} onClick={() => lang !== 'EN' && toggleLang()}>
+            English
+          </div>
+        </div>
         <button className="btn-primary" style={{ padding: '8px 16px', fontSize: '14px' }}>
           {t.getStarted}
         </button>

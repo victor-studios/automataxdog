@@ -104,3 +104,37 @@
   border-color: rgba(181, 23, 158, 0.5); /* Subtle magenta outline */
   box-shadow: 0 0 15px rgba(181, 23, 158, 0.2);
 }
+
+.lang-toggle {
+  display: flex;
+  background: rgba(10, 15, 30, 0.5);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 4px;
+  align-items: center;
+  gap: 4px;
+}
+
+.lang-option {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.lang-option:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.lang-option.active {
+  background: rgba(30, 60, 120, 0.6);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(30, 60, 120, 0.3);
+}
+
